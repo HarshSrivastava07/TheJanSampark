@@ -79,11 +79,10 @@ const App = () => {
 
       <div class="hero-content">
 
-        <h1 class="h1 hero-title">Your full-funnel growth agency</h1>
+        <h1 class="h1 hero-title">Let your brand soar!!</h1>
 
         <p class="hero-text">
-          Capture and retrieve your lists across devices to help you stay organized at work, home, and on the go.
-        </p>
+        At <b>The JanSampark</b>, we're dedicated to unleashing your brand's full potential. Let us guide you to new heights of success with tailored solutions and innovative strategies. It's time to let your brand soar.        </p>
 
         <button class="btn btn-primary">Get started</button>
 
@@ -124,10 +123,10 @@ const App = () => {
                 <IonIcon name="briefcase-outline"></IonIcon>
               </div>
 
-              <h3 class="h3 card-title">Paid Search and Social Management</h3>
+              <h3 class="h3 card-title">CONTENT CREATION / CONTENT MARKETING</h3>
 
               <p class="card-text">
-                Each time a digital asset is purchased or sold, Sequoir donates a percentage of the fees back
+              Crafting compelling narratives and captivating content to elevate your brand's digital presence and engage your target audience effectively.
               </p>
 
             </div>
@@ -140,10 +139,27 @@ const App = () => {
                 <IonIcon name="chatbubbles-outline"></IonIcon>
               </div>
 
-              <h3 class="h3 card-title">Direct Response Content</h3>
+              <h3 class="h3 card-title">WEBSITE AND LANDING PAGE DEVELOPMENT</h3>
 
               <p class="card-text">
-                Each time a digital asset is purchased or sold, Sequoir donates a percentage of the fees back
+              Crafting captivating digital experiences that elevate your brand's online presence through expertly designed websites and landing pages.
+             </p>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="about-card">
+
+              <div class="card-icon">
+                <IonIcon name="rocket-outline"></IonIcon>
+              </div>
+
+              <h3 class="h3 card-title">DIGITAL BRANDIGS</h3>
+
+              <p class="card-text">
+                <span>DATA + EMOTIONS= A STRONG DIGITAL BRAND</span>
+              Transforming brands into digital powerhouses through strategic storytelling and innovative design.
               </p>
 
             </div>
@@ -156,10 +172,42 @@ const App = () => {
                 <IonIcon name="rocket-outline"></IonIcon>
               </div>
 
-              <h3 class="h3 card-title">CRO and Retention Optimizations</h3>
+              <h3 class="h3 card-title">SEARCH ENGINE OPTIMISATION</h3>
 
               <p class="card-text">
-                Each time a digital asset is purchased or sold, Sequoir donates a percentage of the fees back
+              Maximize your online visibility and enhance user engagement with our expert Search Engine Optimization (SEO) strategies
+              </p>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="about-card">
+
+              <div class="card-icon">
+                <IonIcon name="rocket-outline"></IonIcon>
+              </div>
+
+              <h3 class="h3 card-title">SOCIAL MEDIA</h3>
+
+              <p class="card-text">
+                Quickly, creative and attractive will best define your social media profiles when you invest in our social media marketing serices.
+              </p>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="about-card">
+
+              <div class="card-icon">
+                <IonIcon name="rocket-outline"></IonIcon>
+              </div>
+
+              <h3 class="h3 card-title">PAID ADVETISEMENTS</h3>
+
+              <p class="card-text">
+              Maximize your brand's reach and engagement with targeted paid advertisements across various social media platforms.
               </p>
 
             </div>
@@ -180,9 +228,7 @@ const App = () => {
           <h2 class="h2 section-title">We’re obsessed with growth</h2>
 
           <p class="section-text">
-            Each time a digital asset is purchased or sold, Sequoir donates a percentage of the fees back into the
-            development of
-            the asset through its charitable foundation.
+          "Call us the growth gurus because we're obsessed with seeing your business flourish. We're like gardeners, nurturing your brand to bloom into something extraordinary.
           </p>
 
           <button class="btn btn-secondary">Sign Up For Free</button>
