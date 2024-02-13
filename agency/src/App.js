@@ -1,13 +1,34 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Testimonials from '../src/reviews'
 import "./App.css"
 import LazyLoad from 'react-lazyload';
 import Services from "../src/services"
 import { IonIcon } from '@ionic/react';
 import { logoGithub, logoInstagram, logoYoutube, logoFacebook } from 'ionicons/icons';
+import {fireStore} from "../src/firebase";
+import {addDoc,collection} from "@firebase/firestore";
 
 const App = () => {
 
+  const inputRefs = useRef({});
+
+  const ref= collection(fireStore,"Contact form");
+  const handleSave= async(e)=>{
+    e.preventDefault();
+
+    let dataToPass={
+      name:inputRefs.current['name'].value,
+      contact: inputRefs.current['phone'].value,
+      email:inputRefs.current['email'].value,
+      message:inputRefs.current['message'].value
+    };
+
+    try{
+      addDoc(ref,dataToPass);
+    } catch(e){
+      console.log(e);
+    }
+  };
   
   return (
     <div>
@@ -155,7 +176,7 @@ const App = () => {
                 <IonIcon name="rocket-outline"></IonIcon>
               </div>
 
-              <h3 class="h3 card-title">DIGITAL BRANDIGS</h3>
+              <h3 class="h3 card-title">DIGITAL BRANDINGS</h3>
 
               <p class="card-text">
                 <span>DATA + EMOTIONS= A STRONG DIGITAL BRAND</span>
@@ -228,7 +249,7 @@ const App = () => {
           <h2 class="h2 section-title">We’re obsessed with growth</h2>
 
           <p class="section-text">
-          "Call us the growth gurus because we're obsessed with seeing your business flourish. We're like gardeners, nurturing your brand to bloom into something extraordinary.
+      "Call us the growth gurus because we're obsessed with seeing <br /> your business flourish. We're like gardeners, nurturing your brand to    bloom into something extraordinary.
           </p>
 
           <button class="btn btn-secondary">Sign Up For Free</button>
@@ -335,30 +356,30 @@ const App = () => {
         </figure>
       </div>
 
-      <form action="" class="contact-form">
+      <form action="" onSubmit={handleSave} class="contact-form">
 
         <div class="input-wrapper">
           <label for="name" class="input-label">Name *</label>
 
-          <input type="text" name="name" id="name" required placeholder="Type Name" class="input-field"/>
+          <input type="text" name="name" id="name" ref={el => inputRefs.current['name'] = el} required placeholder="Type Name" class="input-field"/>
         </div>
 
         <div class="input-wrapper">
           <label for="phone" class="input-label">Phone</label>
 
-          <input type="tel" name="phone" id="phone" placeholder="Type Phone Number" class="input-field"/>
+          <input type="tel" name="phone" id="phone" ref={el => inputRefs.current['phone'] = el} placeholder="Type Phone Number" class="input-field"/>
         </div>
 
         <div class="input-wrapper">
           <label for="email" class="input-label">Email Address *</label>
 
-          <input type="email" name="email" id="email" required placeholder="Type Email Address" class="input-field"/>
+          <input type="email" name="email" id="email" ref={el => inputRefs.current['email'] = el} required placeholder="Type Email Address" class="input-field"/>
         </div>
 
         <div class="input-wrapper">
           <label for="message" class="input-label">How can we help? *</label>
 
-          <textarea name="message" id="message" placeholder="Type Description" required
+          <textarea name="message" id="message"  ref={el => inputRefs.current['message'] = el}placeholder="Type Description" required
             class="input-field"></textarea>
         </div>
 
